@@ -1,0 +1,338 @@
+/* Mobile first 480px */
+
+body {
+    /*  Hela body ligger inte snyggt i 480px, media queries senare? 
+    // det var padding på body som strulade till det   */
+    font-family: Roboto, regular;
+    margin: 0;
+    padding: 0;
+    /* width: 100%;  Inget händer när man ändrar dessa, i DOM är det 480px?? */
+    height: 100%;
+    box-sizing: border-box;
+    /* line-height: 28.13px; */
+    line-height: 1.5;
+
+}
+
+
+.main-header {
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    padding: 10px;
+    /* min-width: 480px; */
+    /* min-height: 144px; */
+    /* gap: 0px; */
+    opacity: 1;
+    background-color: #011827;
+    color: white;
+    /* flex-shrink: 0; */
+
+}
+
+.logo img {
+    min-width: 128px;
+    min-height: 82px;
+    margin: 26px 0px 36px 27px;
+    /* gap: 0px; */
+    border-radius: 17px 0px 0px 0px;
+    /* opacity: 1; */
+    /* display: grid; */
+
+}
+
+h2 {
+    color: #FFFFFF;
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 24px;
+    display: grid;
+    /* flex-direction: column;  Få varje ord att radbrytas i en kolumn */
+    /* align-items: center;   */
+    width: 78px;
+    height: 84px;
+    margin: 25px 13px 35px;
+    left: 168px;
+    line-height: 28.13px;
+    /* Behöver ha denna för att det ska ligga snyggt brevid logo */
+
+
+}
+
+.image2 {
+    /*The picture becomes drawn out!   */
+    /* width: 480px;  
+    /* height: 274px;  */
+    height: 100%;
+    /* Denna blir utdragen och inte bra höjd på auto*/
+    width: 100%;
+    /* top: 144px; */
+    /* display: grid; */
+    /* object-fit: cover; */
+
+
+}
+
+.main {
+    /* padding: 20px; Gör att hela main inte ligger snyggt, */
+}
+
+/* Buttons */
+.container1 {
+    /* All buttons have same parent class .container1 for style */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 100%; */
+    /* height: 100vh; */
+    margin-top: 30px;
+    font-weight: 700;
+    font-size: 24px;
+    font-family: Roboto;
+}
+
+.component1,
+.component2 {
+    width: 308px;
+    height: 66px;
+    background-color: #8ACFE5;
+    border-radius: 3px;
+    /* margin-left: 60px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: Roboto;
+
+}
+
+.component4 {
+    color: #8ACFE5;
+    /* border-color: #8ACFE5; */
+    background-color: #011827;
+    width: 308px;
+    height: 66px;
+    border: 2px solid #8ACFE5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 24px;
+
+
+}
+
+.component5,
+.component6 {
+
+    width: 308px;
+    height: 66px;
+    background-color: #E3170A;
+    color: #FFFFFF;
+    border-radius: 3px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 700;
+
+
+}
+
+.onlinechallenges {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18.75px;
+}
+
+.johndoe {
+    display: block;
+}
+
+.imgcontainer {
+    display: flex;
+    /* Denna gör att bilden hamnar rätt men påverkar john doe fel*/
+    justify-content: center;
+    align-items: center;
+    margin-left: 21px;
+    margin-right: 20px;
+}
+
+.image3
+/* { display: flex;} */
+
+.secondimage,
+/* hette group3 förut?  */
+.textimage3 {
+    display: flex;
+    max-width: 100%;
+    height: auto;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28.13px;
+}
+
+.secondimage {
+    display: none;
+}
+
+.h1 {
+    font-weight: 400;
+    text-align: center;
+    font-size: 32px;
+    line-height: 37.5px;
+    margin-top: 20px;
+}
+
+
+.container2 {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 20px;
+    /*   Använd kanske grid för att skapa tre likadana som med 
+                    mediaqueries på desktop expanderas ut  */
+    width: 100%;
+    /* height: 200px; */
+    background-color: aquamarine;
+
+
+}
+
+.group4,
+.group5,  
+.group6 {
+    h3 {font-size: 28px;    /* HÄr är en klar avgörande fördel med scss */
+    font-weight: 400; }
+
+    p { 
+        font-size: 14px;
+    }
+    /* flex: 0 0 100%; */
+    /* width: 100%; */
+    /* height: 446px; */
+    margin-right: 3px;
+    /* padding-right: 30px; */
+    /*  Behöver få dessa att vara flexibla och ligga längre från varandra */
+    /*margin-left: 20px;  Ger fel, ökar bar nedan ta mellan  */
+    /* height: 200px; */
+    background-color: aquamarine;
+}
+
+.rectangle7-button { 
+    background-color: #E3170A;
+    width: 179.26px;
+    height: 44px;
+    border-radius: 4px;
+    font-family: Roboto;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+
+.text-section {
+    /* height: 500px; 
+    width: 480px; 
+    background-color: #011827;
+    color: #FFFFFF;  */
+    /* display: flex; */
+    /* box-sizing: border-box; */
+    /* align-items: center; */
+    /* padding: 10px; */
+
+    /* width: 480px; Ej responsiv  */
+    height: 500px;
+    width: 100%;
+    /* gap: 0px; */
+    opacity: 1;
+    background-color: #011827;
+    color: white;
+    /* flex-shrink: 0; */
+
+}
+
+
+
+
+
+
+
+
+.footer {
+    background: #011827;
+    color: #FFFFFF;
+    font-family: Roboto;
+}
+
+/* För desktop : Behöver sätta en mediaquery på bild nesapic och kellypic så att texten 
+    för dom sitter brevid varandra i zigsack, då behövs grid implementeras */
+
+
+/* Desktop */
+
+/* @media screen  and (min-width: 768px) { 
+    .main-header { 
+        display: flex; 
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px; 
+    }
+} */
+
+@media screen and (min-width: 1280px) {
+
+    .imgcontainer {
+        flex-direction: row;
+    }
+
+    .group3,
+    .secondimage {
+        /* width: calc(50% - 10px); */
+        height: 141px;
+        /* margin: 0 5px; */
+        width: 522px;
+
+
+    }
+
+    .secondimage {
+        display: block;
+    }
+
+}
+
+
+@media (min-width: 1024px) {
+    h2 {
+        font-size: 36px;
+        width: auto;
+        height: auto;
+        white-space: nowrap;
+        text-align: left;
+    }
+}
+
+@media (min-width: 768px) {
+    h2 {
+        font-size: 36px;
+        width: auto;
+        height: auto;
+        white-space: nowrap;
+        text-align: left;
+    }
+}
+
+
+
+.follow {
+    color: #FFFFFF;
+    font-family: Roboto;
+    width: 404px;
+    height: 119px;
+    text-align: left;
+}

@@ -57,7 +57,7 @@ body {
 
 // Images
 .image2 {
-    height: 100%;
+    height: auto;
     width: 100%;
 
 }
@@ -66,8 +66,10 @@ body {
     display: none; 
 }
 
+
+
 // Buttons
-.container1 {
+.container1, .container3 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,54 +80,108 @@ body {
 }
 
  .onlinered { 
-        display: none;      // skapa mediaquery för 1280px / konstigt att det ej går nästla i container1? 
+        display: none;    
 
     }
-
-.component1,
-.component2,
-.component4,
-.component5,
-.component6 {
-    width: 308px;
-    height: 66px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    font-weight: $font-weight-bold;
-    border: none;
-    box-shadow: none;
+.onlinered2 { 
+    display: none; 
 }
+// Mixin for button classes .component..
 
-.component1,
-.component2 {
-    background-color: $secondary-color;
-    border-radius: 3px;
-}
+    @mixin button-styles($width, $height) {
+        width: $width;
+        height: $height;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        font-weight: $font-weight-bold;
+        border: none;
+        box-shadow: none;
+    }
 
-.component4 {
-    background-color: $primary-color;
-    color: $secondary-color;
-    border: 2px solid $secondary-color;
-    width: 308px;
-    height: 66px;
-    justify-content: center;
+    .component1,
+    .component2,
+    .component4,
+    .component5,
+    .component6 {
+        @include button-styles(308px, 66px); // Reuse of mixin for common styles 
+    }
+    
+    // Exclusive styles for 
+    .component1,
+    .component2 {
+        background-color: $secondary-color;
+        border-radius: 3px;
+    }
+    
+    // Exclusive styles for 
+    .component4 {
+        background-color: $primary-color;
+        color: $secondary-color;
+        border: 2px solid $secondary-color;
+        border-radius: 3px;
+        align-items: center; 
+        // margin-left: 80px; 
+        margin-top: 15px;
+    }
+    
+    // Exclusive styles for 
+    .component5,
+    .component6 {
+        background-color: $highlight-color;
+        color: $white;
+        border-radius: 3px;
+        margin-bottom: 80px;
+        margin-right: 130px;
+    }
+
+
+// .component1,
+//  .component2,    
+// .component4,
+// .component5,
+// .component6 {
+//     width: 308px;
+//     height: 66px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     font-size: 24px;
+//     font-weight: $font-weight-bold;
+//     border: none;
+//     box-shadow: none;
+//  }  // 
+
+// .component1,
+// .component2 {
+//     background-color: $secondary-color;
+//     border-radius: 3px;
+// }
+
+// .component4 {
+//     background-color: $primary-color;
+//     color: $secondary-color;
+//     border: 2px solid $secondary-color;
+//     width: 308px;
+//     height: 66px;
+//     justify-content: center;
 
     
-}
+// }
 
-.component5,
-.component6 {
-    background-color: $highlight-color;
-    color: $white;
-    border-radius: 3px;
-}
+// .component5,
+// .component6 {
+//     background-color: $highlight-color;
+//     color: $white;
+//     border-radius: 3px;
+// }
 
 .onlinechallenges {
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    margin-bottom: 20px;
     font-weight: $font-weight-bold;
     font-size: 16px;
     line-height: 18.75px;
@@ -137,6 +193,7 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0 20px;
+
 }
 
 // .image3,
@@ -146,16 +203,24 @@ body {
     // margin-right: 170px;   
     height: auto;
     font-size: 24px;
+    font-family: $font-family;
     font-weight: $font-weight-regular;
     line-height: 28.13px;
 
+    p {   
+        margin-bottom: 5px;            //    klass?                                       
+
+    }
+
     .image3 { 
         margin-right: 10px;
+
     }
 
     .johndoe { 
         font-weight: $font-weight-regular;
         font-size: 18px;
+        margin-top: 5px;
     }
 }
 
@@ -172,16 +237,14 @@ body {
 
 .container2 {
     display: flex;
-    margin-left: 20px;
+    margin-left: 50px;
     gap: 20px;
     background-color: $white;
     overflow: hidden; 
      //border-radius: 8px; 
-     .star { 
-        color:#E3170A; 
-        border-radius: 8px;
-        width: 23.8px;
-     }
+     
+
+     
    
 
     // Grid kan övervägas för större skärmar med media queries
@@ -190,7 +253,19 @@ body {
     // width: 363px;
     // height: 446px;
 }
+.starsgroup { 
+    // display: flex;               // Måste få till så att stjärnorna blir på samma rad som p 2-6participants
+     margin-top: -20px; 
+    margin-left: 25px;
+    // height: 26px;
+     
+    .star, .star5 { 
+        margin-left: 2px;
+        width: 23.08;
+        height: auto;
+    }
 
+     }
 .group4,
 .group5,
 .group6 {
@@ -213,12 +288,17 @@ body {
     }
     h3 {
         font-size: 28px;
-        font-weight: 400;
+        font-weight: $font-weight-regular;
         line-height: 32.81px;
+        margin-top: 10px;
+        margin-left: 20px;
     }
 
     p {
-        font-size: 14px;
+        font-size: 18px;
+        margin-left: 20px;
+        line-height: 21.09px;
+        margin-right: 10px;
     }
 
     .rectangle7-button {
@@ -244,24 +324,53 @@ body {
 
 // Text section
 .text-section {
-    // height: 500px;
+    height: 500px;
     width: 100%;
     background-color: $primary-color;
     color: $white;
-    // display: flex;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
     
 
-    p { 
+    .middlequote { 
         font-size: 28px;
         align-items: center;
         justify-content: center;
         font-weight: $font-weight-regular;
+        margin-left: 20px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        text-align: center;
     }
     
 }
+
 .h1build { 
     margin-left: 20px;
+    line-height: 37.5px;
+    
+
+   
 }
+ .pbuild, .pvenue { 
+        font-weight: $font-weight-regular;
+        margin-left: 20px;
+        margin-right: 20px; 
+        font-size: 24px;
+        font-family: $font-family;
+        line-height: 28.13px;
+    }
+
+
+    .venue { 
+        margin-left: 20px;
+        line-height: 37.5px;
+        margin-right: 20px;
+    }
+    
+
 
 // Footer
 .footer {
@@ -301,6 +410,7 @@ body {
 
 
 }
+// Desktop 
 
 @media (min-width: 1280px) {
 
@@ -317,6 +427,10 @@ body {
          font-weight: $font-weight-bold;
          font-family: $font-family;
          font-size: 24px;
+       
+
+         
+         
 
         p  { 
             margin-top: 40px;
@@ -336,15 +450,27 @@ body {
     display: none;
 }
 
-    //  Buttons lie inside picture.   // OBS! De två nedre likadana knapparna i mitten blir fel
-    .container1 { 
-        position: relative;
+    .h1 { 
+        text-align: center;
+        margin-bottom: 40px;
+        margin-top: 40px;
 
     }
 
+    //  Buttons lie inside picture.   // OBS! De två nedre likadana knapparna i mitten blir fel
+    
+    // First buttons inside image2Desktop 
+    .container1 { 
+        position: relative;
+        margin-bottom: 20px; 
+
+    }
+
+    
+
      .component1  { 
             position: absolute; 
-            bottom: 50%; 
+            bottom: 50%;
             left: 50%; 
             transform: translate(10%, 0%);
         }
@@ -367,8 +493,46 @@ body {
         left: 50%; 
         transform: translate(-100%, 0%);
        
+        
+    }
+
+
+// Second buttons 
+.container3 { 
+   display: flex;
+   margin-top: 40px;
+    margin-bottom: 20px; 
+    align-items: center;
+    justify-content: center;
 
     }
+   
+
+.onlinered2 { 
+        // position: relative;
+        display: block; 
+        font-family: $font-family;
+        font-weight: $font-weight-bold;
+        background: $highlight-color;
+        font-size: 24px;
+        color: $white; 
+        width: 308px; 
+        height: 66px; 
+        margin-right: 10px; 
+        border-radius: 4px;
+        border: none;
+        // position: absolute; 
+        // bottom: 50%; 
+        // left: 50%; 
+        // transform: translate(-100%, 0%);
+        }
+        
+        // .container1:last-child { 
+    //     top: 200px;
+    //     margin-top: -20px;
+    //     left: 50%;
+    //     transform: translateX(-50%);
+    // }
 
     .main-header { 
         height: 216px; 
@@ -381,6 +545,8 @@ body {
 
     .image2desktop { 
        display: flex;
+       height: auto;
+       width: 100%;
        
 
 
@@ -449,4 +615,14 @@ body {
 
 
 
+
+}
+
+@media (min-width: 1600px ) { 
+
+.headermenu { 
+      width: 100%;  
+     height: auto; 
+     margin-left: -30px;
+    }
 }

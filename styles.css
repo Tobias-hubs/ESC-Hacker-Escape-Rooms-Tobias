@@ -38,7 +38,7 @@ body {
 }
 
 .image2 {
-  height: 100%;
+  height: auto;
   width: 100%;
 }
 
@@ -46,7 +46,7 @@ body {
   display: none;
 }
 
-.container1 {
+.container1, .container3 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,6 +56,10 @@ body {
 }
 
 .onlinered {
+  display: none;
+}
+
+.onlinered2 {
   display: none;
 }
 
@@ -85,9 +89,9 @@ body {
   background-color: #011827;
   color: #8ACFE5;
   border: 2px solid #8ACFE5;
-  width: 308px;
-  height: 66px;
-  justify-content: center;
+  border-radius: 3px;
+  align-items: center;
+  margin-top: 15px;
 }
 
 .component5,
@@ -95,12 +99,15 @@ body {
   background-color: #E3170A;
   color: #FFFFFF;
   border-radius: 3px;
+  margin-bottom: 80px;
+  margin-right: 130px;
 }
 
 .onlinechallenges {
   display: flex;
   justify-content: center;
   margin-top: 20px;
+  margin-bottom: 20px;
   font-weight: 700;
   font-size: 16px;
   line-height: 18.75px;
@@ -118,8 +125,13 @@ body {
   max-width: 100%;
   height: auto;
   font-size: 24px;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   line-height: 28.13px;
+}
+.secondimage p,
+.textimage3 p {
+  margin-bottom: 5px;
 }
 .secondimage .image3,
 .textimage3 .image3 {
@@ -129,6 +141,7 @@ body {
 .textimage3 .johndoe {
   font-weight: 400;
   font-size: 18px;
+  margin-top: 5px;
 }
 
 .secondimage {
@@ -143,15 +156,20 @@ body {
 
 .container2 {
   display: flex;
-  margin-left: 20px;
+  margin-left: 50px;
   gap: 20px;
   background-color: #FFFFFF;
   overflow: hidden;
 }
-.container2 .star {
-  color: #E3170A;
-  border-radius: 8px;
-  width: 23.8px;
+
+.starsgroup {
+  margin-top: -20px;
+  margin-left: 25px;
+}
+.starsgroup .star, .starsgroup .star5 {
+  margin-left: 2px;
+  width: 23.08;
+  height: auto;
 }
 
 .group4,
@@ -182,11 +200,16 @@ body {
   font-size: 28px;
   font-weight: 400;
   line-height: 32.81px;
+  margin-top: 10px;
+  margin-left: 20px;
 }
 .group4 p,
 .group5 p,
 .group6 p {
-  font-size: 14px;
+  font-size: 18px;
+  margin-left: 20px;
+  line-height: 21.09px;
+  margin-right: 10px;
 }
 .group4 .rectangle7-button,
 .group5 .rectangle7-button,
@@ -202,19 +225,44 @@ body {
 }
 
 .text-section {
+  height: 500px;
   width: 100%;
   background-color: #011827;
   color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.text-section p {
+.text-section .middlequote {
   font-size: 28px;
   align-items: center;
   justify-content: center;
   font-weight: 400;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 .h1build {
   margin-left: 20px;
+  line-height: 37.5px;
+}
+
+.pbuild, .pvenue {
+  font-weight: 400;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+  line-height: 28.13px;
+}
+
+.venue {
+  margin-left: 20px;
+  line-height: 37.5px;
+  margin-right: 20px;
 }
 
 .footer {
@@ -261,8 +309,14 @@ body {
   .onlinechallenges {
     display: none;
   }
+  .h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
   .container1 {
     position: relative;
+    margin-bottom: 20px;
   }
   .component1 {
     position: absolute;
@@ -288,6 +342,26 @@ body {
     left: 50%;
     transform: translate(-100%, 0%);
   }
+  .container3 {
+    display: flex;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  .onlinered2 {
+    display: block;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    background: #E3170A;
+    font-size: 24px;
+    color: #FFFFFF;
+    width: 308px;
+    height: 66px;
+    margin-right: 10px;
+    border-radius: 4px;
+    border: none;
+  }
   .main-header {
     height: 216px;
   }
@@ -297,6 +371,8 @@ body {
   }
   .image2desktop {
     display: flex;
+    height: auto;
+    width: 100%;
   }
   .image2 {
     display: none;
@@ -337,6 +413,13 @@ body {
   .nesapic img, .kellypic img {
     width: 100%;
     height: auto;
+  }
+}
+@media (min-width: 1600px) {
+  .headermenu {
+    width: 100%;
+    height: auto;
+    margin-left: -30px;
   }
 }
 

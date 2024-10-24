@@ -36,7 +36,7 @@ body {
         border-radius: 17px 0 0 0;
     }
 
-    h2 {
+    .headline {
         color: $white;
         font-size: 24px;
         font-weight: $font-weight-bold;
@@ -47,12 +47,12 @@ body {
         line-height: 28.13px;
     }
 
-    
+
 }
 
 .headermenu {
-        display: none; 
-     }
+    display: none;
+}
 
 
 // Images
@@ -62,120 +62,83 @@ body {
 
 }
 
-.image2desktop { 
-    display: none; 
+.image2desktop {
+    display: none;
 }
 
 
 
 // Buttons
-.container1, .container3 {
+.container1,
+.container3 {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 30px;
     font-weight: $font-weight-bold;
-    font-size: 24px;  
+    font-size: 24px;
 
 }
 
- .onlinered { 
-        display: none;    
+.onlinered {
+    display: none;
 
-    }
-.onlinered2 { 
-    display: none; 
 }
+
+.onlinered2 {
+    display: none;
+}
+
 // Mixin for button classes .component..
 
-    @mixin button-styles($width, $height) {
-        width: $width;
-        height: $height;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 24px;
-        font-weight: $font-weight-bold;
-        border: none;
-        box-shadow: none;
-    }
+@mixin button-styles($width, $height) {
+    width: $width;
+    height: $height;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: $font-weight-bold;
+    border: none;
+    box-shadow: none;
+}
 
-    .component1,
-    .component2,
-    .component4,
-    .component5,
-    .component6 {
-        @include button-styles(308px, 66px); // Reuse of mixin for common styles 
-    }
-    
-    // Exclusive styles for 
-    .component1,
-    .component2 {
-        background-color: $secondary-color;
-        border-radius: 3px;
-    }
-    
-    // Exclusive styles for 
-    .component4 {
-        background-color: $primary-color;
-        color: $secondary-color;
-        border: 2px solid $secondary-color;
-        border-radius: 3px;
-        align-items: center; 
-        // margin-left: 80px; 
-        margin-top: 15px;
-    }
-    
-    // Exclusive styles for 
-    .component5,
-    .component6 {
-        background-color: $highlight-color;
-        color: $white;
-        border-radius: 3px;
-        margin-bottom: 80px;
-        margin-right: 130px;
-    }
+.component1,
+.component2,
+.component4,
+.component5,
+.component6 {
+    @include button-styles(308px, 66px); // Reuse of mixin for common styles 
+}
 
+// Exclusive styles for 
+.component1,
+.component2 {
+    background-color: $secondary-color;
+    border-radius: 3px;
+}
 
-// .component1,
-//  .component2,    
-// .component4,
-// .component5,
-// .component6 {
-//     width: 308px;
-//     height: 66px;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     font-size: 24px;
-//     font-weight: $font-weight-bold;
-//     border: none;
-//     box-shadow: none;
-//  }  // 
+// Exclusive styles for 
+.component4 {
+    background-color: $primary-color;
+    color: $secondary-color;
+    border: 2px solid $secondary-color;
+    border-radius: 3px;
+    align-items: center;
+    // margin-left: 80px; 
+    margin-top: 15px;
+}
 
-// .component1,
-// .component2 {
-//     background-color: $secondary-color;
-//     border-radius: 3px;
-// }
+// Exclusive styles for 
+.component5,
+.component6 {
+    background-color: $highlight-color;
+    color: $white;
+    border-radius: 3px;
+    margin-bottom: 80px;
+    margin-right: 130px;
+}
 
-// .component4 {
-//     background-color: $primary-color;
-//     color: $secondary-color;
-//     border: 2px solid $secondary-color;
-//     width: 308px;
-//     height: 66px;
-//     justify-content: center;
-
-    
-// }
-
-// .component5,
-// .component6 {
-//     background-color: $highlight-color;
-//     color: $white;
-//     border-radius: 3px;
-// }
 
 .onlinechallenges {
     display: flex;
@@ -194,30 +157,37 @@ body {
     align-items: center;
     margin: 0 20px;
 
+    //To hide the second part of class imgcontainer in mobile
+    .image3:nth-of-type(2),
+    .textimage3:nth-of-type(2) {
+        display: none;
+
+    }
 }
 
 // .image3,
 .secondimage,
 .textimage3 {
     max-width: 100%;
-    // margin-right: 170px;   
+    margin-right: 20px;
+    margin-left: 15px;
     height: auto;
     font-size: 24px;
     font-family: $font-family;
     font-weight: $font-weight-regular;
     line-height: 28.13px;
 
-    p {   
-        margin-bottom: 5px;            //    klass?                                       
+    p {
+        margin-bottom: 5px; //    klass?                                       
 
     }
 
-    .image3 { 
-        margin-right: 10px;
+    .image3 {
+        margin-right: 20px;
 
     }
 
-    .johndoe { 
+    .johndoe {
         font-weight: $font-weight-regular;
         font-size: 18px;
         margin-top: 5px;
@@ -228,10 +198,12 @@ body {
     display: none;
 }
 
- .h1 {    // Ingen class selektor endast test för att se font-family;
+.h2 {
+    // Ingen class selektor endast test för att se font-family;
     font-family: $font-family;
     font-weight: $font-weight-regular;
-    margin-left: 20px;
+    margin-left: 35px;
+    font-size: 32px;
 }
 
 
@@ -240,12 +212,12 @@ body {
     margin-left: 50px;
     gap: 20px;
     background-color: $white;
-    overflow: hidden; 
-     //border-radius: 8px; 
-     
+    overflow: hidden;
+    //border-radius: 8px; 
 
-     
-   
+
+
+
 
     // Grid kan övervägas för större skärmar med media queries
     // flex-wrap: nowrap;
@@ -253,19 +225,24 @@ body {
     // width: 363px;
     // height: 446px;
 }
-.starsgroup { 
-    // display: flex;               // Måste få till så att stjärnorna blir på samma rad som p 2-6participants
-     margin-top: -20px; 
-    margin-left: 25px;
+
+.starsgroup {
+    display: flex;
+    align-items: center; // Måste få till så att stjärnorna blir på samma rad som p 2-6participants
+    margin-top: -22px;
+    margin-left: 22px;
     // height: 26px;
-     
-    .star, .star5 { 
+
+    .star,
+    .star5 {
         margin-left: 2px;
         width: 23.08;
         height: auto;
+        margin: 3px;
     }
 
-     }
+}
+
 .group4,
 .group5,
 .group6 {
@@ -274,35 +251,37 @@ body {
     background-color: $white;
     // flex-shrink: 0;
     // box-shadow: ;  
-     border: 2px solid rgba(0, 0, 0, 0.089) ;
-    
+    border: 2px solid rgba(0, 0, 0, 0.089);
 
-    .group5 { 
+
+    .group5 {
         // flex-shrink: 1;
-        width: 80%; 
+        width: 80%;
     }
-    
-    .group6 { 
+
+    .group6 {
         // flex-shrink: 0;
-        width: 100%; 
+        width: 100%;
     }
+
     h3 {
         font-size: 28px;
         font-weight: $font-weight-regular;
         line-height: 32.81px;
         margin-top: 10px;
         margin-left: 20px;
+        margin-bottom: 10px;
     }
 
     p {
-        font-size: 18px;
-        margin-left: 20px;
+        font-size: 14px;
+        margin-left: 10px;
         line-height: 21.09px;
         margin-right: 10px;
     }
 
     .rectangle7-button {
-       
+
         background-color: $highlight-color;
         width: 179.26px;
         height: 44px;
@@ -311,7 +290,8 @@ body {
         font-weight: $font-weight-bold;
         color: $white;
         margin-left: 180px;
-        
+        border: none;
+
 
     }
 
@@ -329,12 +309,12 @@ body {
     background-color: $primary-color;
     color: $white;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    
 
-    .middlequote { 
+
+    .middlequote {
         font-size: 28px;
         align-items: center;
         justify-content: center;
@@ -344,53 +324,93 @@ body {
         margin-bottom: 10px;
         text-align: center;
     }
-    
+
 }
 
-.h1build { 
+.h3build {
     margin-left: 20px;
     line-height: 37.5px;
-    
+    font-size: 32px;
 
-   
+
+
 }
- .pbuild, .pvenue { 
-        font-weight: $font-weight-regular;
-        margin-left: 20px;
-        margin-right: 20px; 
-        font-size: 24px;
-        font-family: $font-family;
-        line-height: 28.13px;
-    }
+
+.pbuild,
+.pvenue {
+    font-weight: $font-weight-regular;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 24px;
+    font-family: $font-family;
+    line-height: 28.13px;
+}
 
 
-    .venue { 
-        margin-left: 20px;
-        line-height: 37.5px;
-        margin-right: 20px;
-    }
-    
+.venue {
+    margin-left: 20px;
+    line-height: 37.5px;
+    margin-right: 20px;
+    font-size: 32px;
+}
+
 
 
 // Footer
 .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // align-items: center;
+    height: 650px; // desktop ska vara flex 
     background: $primary-color;
     color: $white;
     font-family: $font-family;
 
-    // h3 { 
-       
+    .esch3 {
+        margin-top: 30px;
+        margin-left: 21px;
 
-    // }
+    }
+
+    h3 {
+        margin-left: 21px;
+        margin-bottom: 20px;
+    }
+
+    p {
+        margin-left: 21px;
+        font-weight: $font-weight-regular;
+        font-size: 18px;
+        margin-right: 20px;
+        display: block;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        line-height: 21.09px;
+
+        // text-align: center;
+
+    }
+
+
+
+    .ecstext {
+        margin-top: -15px;
+
+    }
+
+
+
 }
 
 // Media Queries
 @media (min-width: 768px) {
-    h2 {
+    .headline {                
         font-size: 36px;
         white-space: nowrap;
         text-align: left;
-    }
+    }                        // . headline
+
     // .container2 { 
     //     width: 480px;
     //     overflow: visible; 
@@ -401,7 +421,7 @@ body {
 
 
 @media (min-width: 1024px) {
-    h2 {
+    .headline {
         font-size: 36px;
         white-space: nowrap;
         text-align: left;
@@ -410,47 +430,62 @@ body {
 
 
 }
-// Desktop 
+
+// Desktop     // * 2-6 participants ska flöda ut till kanten av boxen 
+
 
 @media (min-width: 1280px) {
 
-    .logo img { 
-         margin: 40px 0 50px 30px;  //Något påverkar att detta inte fungerar. 
+    .logo img {
+        margin: 40px 0 50px 30px; //Något påverkar att detta inte fungerar. 
     }
 
-    .headermenu {  
-         display: flex;
-         justify-content: space-between;
-         align-items: center;
-         margin-top: 130px;
-         gap: 50px;
-         font-weight: $font-weight-bold;
-         font-family: $font-family;
-         font-size: 24px;
-       
+    .headermenu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 130px;
+        gap: 50px;
+        font-weight: $font-weight-bold;
+        font-family: $font-family;
+        font-size: 24px;
 
-         
-         
 
-        p  { 
+
+
+
+        p {
             margin-top: 40px;
             // margin: 0; 
-            padding: 0 15px; 
-         
-       
+            padding: 0 15px;
+
+
         }
 
- .blue { 
-            color:#8ACFE5;
+        .blue {
+            color: #8ACFE5;
         }
 
     }
 
-.onlinechallenges { 
-    display: none;
-}
 
-    .h1 { 
+    .text-section {
+        display: flex;
+        justify-content: center;
+    }
+
+    .middlequote {
+        text-align: center;
+        max-width: 600px;
+
+    }
+
+
+    .onlinechallenges {
+        display: none;
+    }
+
+    .headline {
         text-align: center;
         margin-bottom: 40px;
         margin-top: 40px;
@@ -458,171 +493,177 @@ body {
     }
 
     //  Buttons lie inside picture.   // OBS! De två nedre likadana knapparna i mitten blir fel
-    
+
     // First buttons inside image2Desktop 
-    .container1 { 
+    .container1 {
         position: relative;
-        margin-bottom: 20px; 
+        margin-bottom: 20px;
 
     }
 
-    
 
-     .component1  { 
-            position: absolute; 
-            bottom: 50%;
-            left: 50%; 
-            transform: translate(10%, 0%);
-        }
 
-    .onlinered { 
+    .component1 {
+        position: absolute;
+        bottom: 50%;
+        left: 50%;
+        transform: translate(10%, 0%);
+    }
+
+    .onlinered {
         position: relative;
-        display: block; 
+        display: block;
         font-family: $font-family;
         font-weight: $font-weight-bold;
         background: $highlight-color;
         font-size: 24px;
-        color: $white; 
-        width: 308px; 
-        height: 66px; 
-        margin-right: 10px; 
+        color: $white;
+        width: 308px;
+        height: 66px;
+        margin-right: 10px;
         border-radius: 4px;
         border: none;
-        position: absolute; 
-        bottom: 50%; 
-        left: 50%; 
+        position: absolute;
+        bottom: 50%;
+        left: 50%;
         transform: translate(-100%, 0%);
-       
-        
+
+
     }
 
 
-// Second buttons 
-.container3 { 
-   display: flex;
-   margin-top: 40px;
-    margin-bottom: 20px; 
-    align-items: center;
-    justify-content: center;
+    // Second buttons 
+    .container3 {
+        display: flex;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        align-items: center;
+        justify-content: center;
 
     }
-   
 
-.onlinered2 { 
+
+    .onlinered2 {
         // position: relative;
-        display: block; 
+        display: block;
         font-family: $font-family;
         font-weight: $font-weight-bold;
         background: $highlight-color;
         font-size: 24px;
-        color: $white; 
-        width: 308px; 
-        height: 66px; 
-        margin-right: 10px; 
+        color: $white;
+        width: 308px;
+        height: 66px;
+        margin-right: 10px;
         border-radius: 4px;
         border: none;
         // position: absolute; 
         // bottom: 50%; 
         // left: 50%; 
         // transform: translate(-100%, 0%);
-        }
-        
-        // .container1:last-child { 
+    }
+
+    // .container1:last-child { 
     //     top: 200px;
     //     margin-top: -20px;
     //     left: 50%;
     //     transform: translateX(-50%);
     // }
 
-    .main-header { 
-        height: 216px; 
+    .main-header {
+        height: 216px;
 
-        h2 { 
+        .headline {
             font-size: 40px;
             align-items: center;
         }
     }
 
-    .image2desktop { 
-       display: flex;
-       height: auto;
-       width: 100%;
-       
+    .image2desktop {
+        display: flex;
+        height: auto;
+        width: 100%;
 
 
 
-       
+
+
     }
+
     // To only show desktop version
-    .image2 { 
+    .image2 {
         display: none;
-       }
+    }
 
 
     .imgcontainer {
         flex-direction: row;
-    }
 
- .textimage3 {
-    margin-right: 170px;  
-
-
-    }
-    
-
-    .group3,
-    .secondimage {
-        height: 141px;
-        width: 522px;
-    }
-
-    .secondimage {
-        display: block;
-    }
-
-
-  //  Grid layout for containergrid
-  .containergrid { 
-    display: grid; 
-    grid-template-columns: 1fr 1fr;
-    // gap: 20px;
-}
-
-    .nesapic { 
-        grid-column: 1 / 2;
-        grid-row: 1;
+        // To show the second part of class imgcontainer in desktop 
+        .image3:nth-of-type(2),
+        .textimage3:nth-of-type(2) {
+            display: block;
         }
 
-    .rightside { 
-        grid-column: 2 / 3; 
-        grid-row: 1; 
+        .textimage3 {
+            margin-right: 170px;
+
+
+
+
+        }
+
+
+
+    }
+
+
+    //  Grid layout for containergrid
+    .containergrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        // gap: 20px;
+    }
+
+    .nesapic {
+        grid-column: 1 / 2;
+        grid-row: 1;
+    }
+
+    .rightside {
+        grid-column: 2 / 3;
+        grid-row: 1;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;  
+        align-items: flex-start;
         // gap: 10px; 
     }
-   
 
-     .kellypic { 
-        grid-column: 2 / 3; /* Startar i andra kolumnen */
+
+    .kellypic {
+        grid-column: 2 / 3;
+        /* Startar i andra kolumnen */
         grid-row: 2;
-     }
+    }
 
-     .nesapic img, .kellypic img {
+    .nesapic img,
+    .kellypic img {
         width: 100%;
         height: auto;
-     }
+    }
 
 
-
+    .footer {
+        display: flex;
+        height: 467px;
+    }
 
 }
 
-@media (min-width: 1600px ) { 
+@media (min-width: 1600px) {
 
-.headermenu { 
-      width: 100%;  
-     height: auto; 
-     margin-left: -30px;
+    .headermenu {
+        width: 100%;
+        height: auto;
+        margin-left: -30px;
     }
 }

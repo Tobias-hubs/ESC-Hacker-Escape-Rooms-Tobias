@@ -22,7 +22,7 @@ body {
   margin: 26px 0 36px 27px;
   border-radius: 17px 0 0 0;
 }
-.main-header h2 {
+.main-header .headline {
   color: #FFFFFF;
   font-size: 24px;
   font-weight: 700;
@@ -46,7 +46,8 @@ body {
   display: none;
 }
 
-.container1, .container3 {
+.container1,
+.container3 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -119,10 +120,16 @@ body {
   align-items: center;
   margin: 0 20px;
 }
+.imgcontainer .image3:nth-of-type(2),
+.imgcontainer .textimage3:nth-of-type(2) {
+  display: none;
+}
 
 .secondimage,
 .textimage3 {
   max-width: 100%;
+  margin-right: 20px;
+  margin-left: 15px;
   height: auto;
   font-size: 24px;
   font-family: "Roboto", sans-serif;
@@ -135,7 +142,7 @@ body {
 }
 .secondimage .image3,
 .textimage3 .image3 {
-  margin-right: 10px;
+  margin-right: 20px;
 }
 .secondimage .johndoe,
 .textimage3 .johndoe {
@@ -148,10 +155,11 @@ body {
   display: none;
 }
 
-.h1 {
+.h2 {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  margin-left: 20px;
+  margin-left: 35px;
+  font-size: 32px;
 }
 
 .container2 {
@@ -163,13 +171,17 @@ body {
 }
 
 .starsgroup {
-  margin-top: -20px;
-  margin-left: 25px;
+  display: flex;
+  align-items: center;
+  margin-top: -22px;
+  margin-left: 22px;
 }
-.starsgroup .star, .starsgroup .star5 {
+.starsgroup .star,
+.starsgroup .star5 {
   margin-left: 2px;
   width: 23.08;
   height: auto;
+  margin: 3px;
 }
 
 .group4,
@@ -202,12 +214,13 @@ body {
   line-height: 32.81px;
   margin-top: 10px;
   margin-left: 20px;
+  margin-bottom: 10px;
 }
 .group4 p,
 .group5 p,
 .group6 p {
-  font-size: 18px;
-  margin-left: 20px;
+  font-size: 14px;
+  margin-left: 10px;
   line-height: 21.09px;
   margin-right: 10px;
 }
@@ -222,6 +235,7 @@ body {
   font-weight: 700;
   color: #FFFFFF;
   margin-left: 180px;
+  border: none;
 }
 
 .text-section {
@@ -245,12 +259,14 @@ body {
   text-align: center;
 }
 
-.h1build {
+.h3build {
   margin-left: 20px;
   line-height: 37.5px;
+  font-size: 32px;
 }
 
-.pbuild, .pvenue {
+.pbuild,
+.pvenue {
   font-weight: 400;
   margin-left: 20px;
   margin-right: 20px;
@@ -263,23 +279,49 @@ body {
   margin-left: 20px;
   line-height: 37.5px;
   margin-right: 20px;
+  font-size: 32px;
 }
 
 .footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 650px;
   background: #011827;
   color: #FFFFFF;
   font-family: "Roboto", sans-serif;
 }
+.footer .esch3 {
+  margin-top: 30px;
+  margin-left: 21px;
+}
+.footer h3 {
+  margin-left: 21px;
+  margin-bottom: 20px;
+}
+.footer p {
+  margin-left: 21px;
+  font-weight: 400;
+  font-size: 18px;
+  margin-right: 20px;
+  display: block;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  line-height: 21.09px;
+}
+.footer .ecstext {
+  margin-top: -15px;
+}
 
 @media (min-width: 768px) {
-  h2 {
+  .headline {
     font-size: 36px;
     white-space: nowrap;
     text-align: left;
   }
 }
 @media (min-width: 1024px) {
-  h2 {
+  .headline {
     font-size: 36px;
     white-space: nowrap;
     text-align: left;
@@ -306,10 +348,18 @@ body {
   .headermenu .blue {
     color: #8ACFE5;
   }
+  .text-section {
+    display: flex;
+    justify-content: center;
+  }
+  .middlequote {
+    text-align: center;
+    max-width: 600px;
+  }
   .onlinechallenges {
     display: none;
   }
-  .h1 {
+  .headline {
     text-align: center;
     margin-bottom: 40px;
     margin-top: 40px;
@@ -365,7 +415,7 @@ body {
   .main-header {
     height: 216px;
   }
-  .main-header h2 {
+  .main-header .headline {
     font-size: 40px;
     align-items: center;
   }
@@ -380,16 +430,12 @@ body {
   .imgcontainer {
     flex-direction: row;
   }
-  .textimage3 {
-    margin-right: 170px;
-  }
-  .group3,
-  .secondimage {
-    height: 141px;
-    width: 522px;
-  }
-  .secondimage {
+  .imgcontainer .image3:nth-of-type(2),
+  .imgcontainer .textimage3:nth-of-type(2) {
     display: block;
+  }
+  .imgcontainer .textimage3 {
+    margin-right: 170px;
   }
   .containergrid {
     display: grid;
@@ -407,12 +453,18 @@ body {
     align-items: flex-start;
   }
   .kellypic {
-    grid-column: 2/3; /* Startar i andra kolumnen */
+    grid-column: 2/3;
+    /* Startar i andra kolumnen */
     grid-row: 2;
   }
-  .nesapic img, .kellypic img {
+  .nesapic img,
+  .kellypic img {
     width: 100%;
     height: auto;
+  }
+  .footer {
+    display: flex;
+    height: 467px;
   }
 }
 @media (min-width: 1600px) {

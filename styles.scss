@@ -1,5 +1,4 @@
 /* Mobile first 480px */
-
 $primary-color: #011827;
 $secondary-color: #8ACFE5;
 $highlight-color: #E3170A;
@@ -17,8 +16,6 @@ body {
     box-sizing: border-box;
     line-height: 1.5;
 }
-
-
 
 // Main header
 .main-header {
@@ -46,8 +43,6 @@ body {
         margin: 25px 13px 35px;
         line-height: 28.13px;
     }
-
-
 }
 
 .headermenu {
@@ -59,7 +54,6 @@ body {
 .image2 {
     height: auto;
     width: 100%;
-
 }
 
 .image2desktop {
@@ -77,12 +71,10 @@ body {
     margin-top: 30px;
     font-weight: $font-weight-bold;
     font-size: 24px;
-
 }
 
 .onlinered {
     display: none;
-
 }
 
 .onlinered2 {
@@ -90,7 +82,6 @@ body {
 }
 
 // Mixin for button classes .component..
-
 @mixin button-styles($width, $height) {
     width: $width;
     height: $height;
@@ -139,7 +130,6 @@ body {
     margin-right: 130px;
 }
 
-
 .onlinechallenges {
     display: flex;
     justify-content: center;
@@ -148,6 +138,10 @@ body {
     font-weight: $font-weight-bold;
     font-size: 16px;
     line-height: 18.75px;
+}
+
+a:visited {
+    color: #36769D;
 }
 
 // Imgcontainer
@@ -206,7 +200,6 @@ body {
     font-size: 32px;
 }
 
-
 .container2 {
     display: flex;
     margin-left: 50px;
@@ -215,20 +208,14 @@ body {
     overflow: hidden;
     //border-radius: 8px; 
 
-
-
-
-
-    // Grid kan övervägas för större skärmar med media queries
-    // flex-wrap: nowrap;
-    // overflow-x: auto;
-    // width: 363px;
-    // height: 446px;
 }
+
+
+
 
 .starsgroup {
     display: flex;
-    align-items: center; // Måste få till så att stjärnorna blir på samma rad som p 2-6participants
+    align-items: center;
     margin-top: -22px;
     margin-left: 22px;
     // height: 26px;
@@ -247,11 +234,14 @@ body {
 .group5,
 .group6 {
     width: 100%;
+    height: 466px;
     margin-right: 3px;
     background-color: $white;
     // flex-shrink: 0;
     // box-shadow: ;  
-    border: 2px solid rgba(0, 0, 0, 0.089);
+    border: 3px solid rgba(0, 0, 0, 0.089);
+    border-radius: 8px;
+    box-sizing: border-box;
 
 
     .group5 {
@@ -274,11 +264,20 @@ body {
     }
 
     p {
-        font-size: 14px;
-        margin-left: 10px;
+        font-weight: $font-weight-regular;
+        font-size: 18px;
+        margin-left: 20px;
         line-height: 21.09px;
-        margin-right: 10px;
+        margin-right: 15px;
+        margin-top: 10px;
     }
+
+    .participants {
+        font-size: 14px;
+
+    }
+
+
 
     .rectangle7-button {
 
@@ -289,7 +288,7 @@ body {
         font-family: $font-family;
         font-weight: $font-weight-bold;
         color: $white;
-        margin-left: 180px;
+        margin-left: 170px;
         border: none;
 
 
@@ -336,6 +335,14 @@ body {
 
 }
 
+.nesapicdesktop {
+    display: none;
+}
+
+.kellypicdesktop {
+    display: none;
+}
+
 .pbuild,
 .pvenue {
     font-weight: $font-weight-regular;
@@ -362,7 +369,7 @@ body {
     flex-direction: column;
     justify-content: center;
     // align-items: center;
-    height: 650px; // desktop ska vara flex 
+    height: 566px; // desktop ska vara flex 
     background: $primary-color;
     color: $white;
     font-family: $font-family;
@@ -392,35 +399,26 @@ body {
 
     }
 
-
-
     .ecstext {
         margin-top: -15px;
-
     }
 
+    .site h3 {
+        margin-bottom: 5px;
+    }
 
+    .follow {
+        height: 220px;
+    }
 
+    .follow h3 {
+        margin-bottom: 5px;
+    }
 }
+
 
 // Media Queries
 @media (min-width: 768px) {
-    .headline {                
-        font-size: 36px;
-        white-space: nowrap;
-        text-align: left;
-    }                        // . headline
-
-    // .container2 { 
-    //     width: 480px;
-    //     overflow: visible; 
-    // }
-
-}
-
-
-
-@media (min-width: 1024px) {
     .headline {
         font-size: 36px;
         white-space: nowrap;
@@ -428,13 +426,33 @@ body {
     }
 
 
-
 }
 
-// Desktop     // * 2-6 participants ska flöda ut till kanten av boxen 
 
+
+// @media (min-width: 1024px) {
+//     .headline {
+//         font-size: 36px;
+//         white-space: nowrap;
+//         text-align: left;
+//     }
+
+
+
+// }
+
+// Desktop    
+
+//testar att ändra från min t  max
 
 @media (min-width: 1280px) {
+
+    .h2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
 
     .logo img {
         margin: 40px 0 50px 30px; //Något påverkar att detta inte fungerar. 
@@ -450,22 +468,30 @@ body {
         font-family: $font-family;
         font-size: 24px;
 
-
-
-
-
         p {
             margin-top: 40px;
             // margin: 0; 
             padding: 0 15px;
-
-
         }
 
         .blue {
             color: #8ACFE5;
         }
 
+    }
+
+    .group4,
+    .group5,
+    .group6 {
+        width: 366px;
+
+    }
+
+    // To make 2-6 participants shift place to right 
+    .starsgroup {
+        p {
+            margin-left: 120px;
+        }
     }
 
 
@@ -501,8 +527,6 @@ body {
 
     }
 
-
-
     .component1 {
         position: absolute;
         bottom: 50%;
@@ -525,12 +549,9 @@ body {
         border: none;
         position: absolute;
         bottom: 50%;
-        left: 50%;
+        left: 51.5%;
         transform: translate(-100%, 0%);
-
-
     }
-
 
     // Second buttons 
     .container3 {
@@ -539,10 +560,8 @@ body {
         margin-bottom: 20px;
         align-items: center;
         justify-content: center;
-
+        margin-left: 50px;
     }
-
-
     .onlinered2 {
         // position: relative;
         display: block;
@@ -556,18 +575,8 @@ body {
         margin-right: 10px;
         border-radius: 4px;
         border: none;
-        // position: absolute; 
-        // bottom: 50%; 
-        // left: 50%; 
-        // transform: translate(-100%, 0%);
+     
     }
-
-    // .container1:last-child { 
-    //     top: 200px;
-    //     margin-top: -20px;
-    //     left: 50%;
-    //     transform: translateX(-50%);
-    // }
 
     .main-header {
         height: 216px;
@@ -577,26 +586,22 @@ body {
             align-items: center;
         }
     }
-
     .image2desktop {
         display: flex;
         height: auto;
         width: 100%;
 
-
-
-
-
     }
-
     // To only show desktop version
     .image2 {
         display: none;
     }
 
-
     .imgcontainer {
+        display: flex;
+        justify-content: center;
         flex-direction: row;
+        margin-left: 100px;
 
         // To show the second part of class imgcontainer in desktop 
         .image3:nth-of-type(2),
@@ -605,17 +610,14 @@ body {
         }
 
         .textimage3 {
-            margin-right: 170px;
 
-
-
-
+            margin-right: 110px;
         }
 
-
-
+        .image3:nth-of-type(2) {
+            margin-left: -50px;
+        }
     }
-
 
     //  Grid layout for containergrid
     .containergrid {
@@ -624,9 +626,14 @@ body {
         // gap: 20px;
     }
 
-    .nesapic {
+    .nesapicdesktop {
+        display: grid;
         grid-column: 1 / 2;
         grid-row: 1;
+    }
+
+    .nesapic {
+        display: none;
     }
 
     .rightside {
@@ -634,36 +641,102 @@ body {
         grid-row: 1;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center; //flex-start
         // gap: 10px; 
+
+        .container1 {
+            margin-top: 10px;
+
+        }
     }
 
+    .h3build {
+        margin-top: 60px;
+        margin-right: 90px;
+        width: 400px;
+    }
 
-    .kellypic {
+    .pbuild {
+        margin-right: 60px;
+        margin-bottom: 5px;
+        width: 416px;
+    }
+
+    .component5 {
+        margin-bottom: 10px;
+    }
+
+    .venue {
+        margin-top: 60px;
+        margin-right: 20px;
+        margin-left: 60px;
+        width: 400px;
+    }
+
+    .pvenue {
+        margin-right: 60px;
+        margin-left: 60px;
+        width: 416px;
+    }
+
+    .component6 {
+        margin-right: 220px;
+        margin-bottom: 140px;
+    }
+
+    .kellypicdesktop {
+        display: grid;
         grid-column: 2 / 3;
         /* Startar i andra kolumnen */
         grid-row: 2;
     }
 
-    .nesapic img,
-    .kellypic img {
+    .kellypic {
+        display: none;
+    }
+
+    .nesapicdesktop img,
+    .kellypicdesktop img {
         width: 100%;
         height: auto;
     }
-
 
     .footer {
-        display: flex;
+        // display: flex;
         height: 467px;
-    }
+        flex-direction: row;
+        align-items: center;
+        // justify-content: space-between;
+        gap: 100px;
 
+        .escaperooms {
+            width: 500px;
+            //    margin-left: 40px;
+            margin-right: 80px;
+
+            .ecstext {
+                width: 420px;
+            }
+
+            .footer h3 {
+                margin-bottom: 10px;
+            }
+        }
+    }
 }
 
-@media (min-width: 1600px) {
+// @media (min-width: 1600px) {
 
-    .headermenu {
-        width: 100%;
-        height: auto;
-        margin-left: -30px;
-    }
-}
+//     .headermenu {
+//         width: 100%;
+//         height: auto;
+//         margin-left: -30px;
+//     }
+
+//     .group4,
+//     .group5,
+//     .group6 {
+//         max-width: 370px;
+//         margin: 0 auto;
+//     }
+// }

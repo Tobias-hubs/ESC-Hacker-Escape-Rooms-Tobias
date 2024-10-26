@@ -22,7 +22,6 @@ body {
     display: flex;
     box-sizing: border-box;
     align-items: center;
-    // padding: 10px;
     background-color: $primary-color;
     color: $white;
 
@@ -49,7 +48,6 @@ body {
     display: none;
 }
 
-
 // Images
 .image2 {
     height: auto;
@@ -59,8 +57,6 @@ body {
 .image2desktop {
     display: none;
 }
-
-
 
 // Buttons
 .container1,
@@ -115,8 +111,7 @@ body {
     color: $secondary-color;
     border: 2px solid $secondary-color;
     border-radius: 3px;
-    align-items: center;
-    // margin-left: 80px; 
+    align-items: center; 
     margin-top: 15px;
 }
 
@@ -155,7 +150,6 @@ a:visited {
     .image3:nth-of-type(2),
     .textimage3:nth-of-type(2) {
         display: none;
-
     }
 }
 
@@ -172,7 +166,7 @@ a:visited {
     line-height: 28.13px;
 
     p {
-        margin-bottom: 5px; //    klass?                                       
+        margin-bottom: 5px;                                   
 
     }
 
@@ -193,7 +187,6 @@ a:visited {
 }
 
 .h2 {
-    // Ingen class selektor endast test för att se font-family;
     font-family: $font-family;
     font-weight: $font-weight-regular;
     margin-left: 35px;
@@ -206,19 +199,13 @@ a:visited {
     gap: 20px;
     background-color: $white;
     overflow: hidden;
-    //border-radius: 8px; 
-
 }
-
-
-
 
 .starsgroup {
     display: flex;
     align-items: center;
     margin-top: -22px;
     margin-left: 22px;
-    // height: 26px;
 
     .star,
     .star5 {
@@ -237,20 +224,15 @@ a:visited {
     height: 466px;
     margin-right: 3px;
     background-color: $white;
-    // flex-shrink: 0;
-    // box-shadow: ;  
     border: 3px solid rgba(0, 0, 0, 0.089);
     border-radius: 8px;
     box-sizing: border-box;
 
-
     .group5 {
-        // flex-shrink: 1;
         width: 80%;
     }
 
     .group6 {
-        // flex-shrink: 0;
         width: 100%;
     }
 
@@ -274,13 +256,9 @@ a:visited {
 
     .participants {
         font-size: 14px;
-
     }
 
-
-
     .rectangle7-button {
-
         background-color: $highlight-color;
         width: 179.26px;
         height: 44px;
@@ -290,15 +268,7 @@ a:visited {
         color: $white;
         margin-left: 170px;
         border: none;
-
-
-    }
-
-    /* Behåll för flexibilitet i layout */
-    /* flex: 0 0 100%; */
-    /* padding-right: 30px; */
-    /* margin-left: 20px; */
-    // height: 200px;
+    } 
 }
 
 // Text section
@@ -312,7 +282,6 @@ a:visited {
     justify-content: center;
     align-items: center;
 
-
     .middlequote {
         font-size: 28px;
         align-items: center;
@@ -323,15 +292,12 @@ a:visited {
         margin-bottom: 10px;
         text-align: center;
     }
-
 }
 
 .h3build {
     margin-left: 20px;
     line-height: 37.5px;
     font-size: 32px;
-
-
 
 }
 
@@ -353,7 +319,6 @@ a:visited {
     line-height: 28.13px;
 }
 
-
 .venue {
     margin-left: 20px;
     line-height: 37.5px;
@@ -361,15 +326,12 @@ a:visited {
     font-size: 32px;
 }
 
-
-
 // Footer
 .footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    // align-items: center;
-    height: 566px; // desktop ska vara flex 
+    height: 566px; 
     background: $primary-color;
     color: $white;
     font-family: $font-family;
@@ -395,8 +357,6 @@ a:visited {
         margin-bottom: 2px;
         line-height: 21.09px;
 
-        // text-align: center;
-
     }
 
     .ecstext {
@@ -417,45 +377,26 @@ a:visited {
 }
 
 
-// Media Queries
+//Media Queries
 @media (min-width: 768px) {
     .headline {
         font-size: 36px;
         white-space: nowrap;
         text-align: left;
     }
-
-
 }
 
-
-
-// @media (min-width: 1024px) {
-//     .headline {
-//         font-size: 36px;
-//         white-space: nowrap;
-//         text-align: left;
-//     }
-
-
-
-// }
-
 // Desktop    
-
-//testar att ändra från min t  max
-
 @media (min-width: 1280px) {
-
+  
     .h2 {
         display: flex;
         align-items: center;
         justify-content: center;
-
     }
 
     .logo img {
-        margin: 40px 0 50px 30px; //Något påverkar att detta inte fungerar. 
+        margin: 40px 0 50px 30px; 
     }
 
     .headermenu {
@@ -467,24 +408,20 @@ a:visited {
         font-weight: $font-weight-bold;
         font-family: $font-family;
         font-size: 24px;
-
         p {
             margin-top: 40px;
             // margin: 0; 
             padding: 0 15px;
         }
-
         .blue {
             color: #8ACFE5;
         }
-
     }
 
     .group4,
     .group5,
     .group6 {
         width: 366px;
-
     }
 
     // To make 2-6 participants shift place to right 
@@ -494,7 +431,6 @@ a:visited {
         }
     }
 
-
     .text-section {
         display: flex;
         justify-content: center;
@@ -503,9 +439,7 @@ a:visited {
     .middlequote {
         text-align: center;
         max-width: 600px;
-
     }
-
 
     .onlinechallenges {
         display: none;
@@ -515,16 +449,12 @@ a:visited {
         text-align: center;
         margin-bottom: 40px;
         margin-top: 40px;
-
     }
-
-    //  Buttons lie inside picture.   // OBS! De två nedre likadana knapparna i mitten blir fel
 
     // First buttons inside image2Desktop 
     .container1 {
         position: relative;
         margin-bottom: 20px;
-
     }
 
     .component1 {
@@ -552,7 +482,6 @@ a:visited {
         left: 51.5%;
         transform: translate(-100%, 0%);
     }
-
     // Second buttons 
     .container3 {
         display: flex;
@@ -562,8 +491,8 @@ a:visited {
         justify-content: center;
         margin-left: 50px;
     }
+
     .onlinered2 {
-        // position: relative;
         display: block;
         font-family: $font-family;
         font-weight: $font-weight-bold;
@@ -575,7 +504,6 @@ a:visited {
         margin-right: 10px;
         border-radius: 4px;
         border: none;
-     
     }
 
     .main-header {
@@ -586,6 +514,7 @@ a:visited {
             align-items: center;
         }
     }
+
     .image2desktop {
         display: flex;
         height: auto;
@@ -610,7 +539,6 @@ a:visited {
         }
 
         .textimage3 {
-
             margin-right: 110px;
         }
 
@@ -623,7 +551,7 @@ a:visited {
     .containergrid {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        // gap: 20px;
+
     }
 
     .nesapicdesktop {
@@ -646,7 +574,6 @@ a:visited {
 
         .container1 {
             margin-top: 10px;
-
         }
     }
 
@@ -687,7 +614,6 @@ a:visited {
     .kellypicdesktop {
         display: grid;
         grid-column: 2 / 3;
-        /* Startar i andra kolumnen */
         grid-row: 2;
     }
 
@@ -702,16 +628,13 @@ a:visited {
     }
 
     .footer {
-        // display: flex;
         height: 467px;
         flex-direction: row;
         align-items: center;
-        // justify-content: space-between;
         gap: 100px;
 
         .escaperooms {
             width: 500px;
-            //    margin-left: 40px;
             margin-right: 80px;
 
             .ecstext {
@@ -724,19 +647,3 @@ a:visited {
         }
     }
 }
-
-// @media (min-width: 1600px) {
-
-//     .headermenu {
-//         width: 100%;
-//         height: auto;
-//         margin-left: -30px;
-//     }
-
-//     .group4,
-//     .group5,
-//     .group6 {
-//         max-width: 370px;
-//         margin: 0 auto;
-//     }
-// }

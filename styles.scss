@@ -45,7 +45,84 @@ body {
 }
 
 .headermenu {
+    // display: none;
+    .menubutton { 
+        position: absolute;
+        top: 20px; 
+        right: 10px;
+    }
+
+    p { 
+        display: none; // För att hindra att text syns eftersom den är dold som standard i mobile
+    }
+}
+ 
+.headermenu.show p {     // När det är dags att lägga till show
+    display: block; 
+}
+#overlay.hidden { 
     display: none;
+}
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(66, 66, 66, 0.9); /* Halvtransparent bakgrund */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+   
+    .menubutton { 
+        display: none; 
+    }
+    .closebutton, #closeButton { 
+        // background-color: $primary-color;
+        // color: $primary-color;
+        padding: 0;
+        position: absolute;
+        top: 20px; 
+        right: 10px;
+
+        #closeButton {  // Får problem med denna eftersom den syns, och det behövs ju en ID för att js ska fungera? 
+           display: none;
+        }
+
+
+    }
+
+   p { 
+        color:#FFFFFF; 
+        font-size: 36px;
+        font-family: $font-family;
+        font-weight: $font-weight-bold;
+        
+
+    }
+ }
+
+ .modal {
+    width: 90vw;
+    max-width: 410px;
+    height: 550px;
+    background: $primary-color;
+    padding: 20px;
+    // border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    text-align: center;
+}
+
+// Mobile Menu 
+.menubutton {
+    font-size: 24px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    
 }
 
 // Images
@@ -384,6 +461,8 @@ a:visited {
         white-space: nowrap;
         text-align: left;
     }
+
+    
 }
 
 // Desktop    
@@ -410,11 +489,14 @@ a:visited {
         font-size: 24px;
         p {
             margin-top: 40px;
-            // margin: 0; 
             padding: 0 15px;
+            display: block;
         }
         .blue {
             color: #8ACFE5;
+        }
+        .menubutton {       //To hide Menubutton in desktop
+            display: none;
         }
     }
 

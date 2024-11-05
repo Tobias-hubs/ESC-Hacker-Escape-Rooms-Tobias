@@ -51,28 +51,28 @@ body {
     background: none;
     border: none;
     cursor: pointer;
-    
+
 }
 
 .headermenu {
-    // display: none;
-    .menubutton { 
+    
+    .menubutton {
         position: absolute;
-        top: 20px; 
+        top: 20px;
         right: 10px;
     }
 
-    p { 
-        display: none; // För att hindra att text syns eftersom den är dold som standard i mobile
+    p {
+        display: none; 
     }
 }
- 
-.headermenu.show p {     // När det är dags att lägga till show
-    display: block; 
+
+.headermenu.show p {
+    display: block;
 }
-#overlay.hidden { 
-    display: none;
-    // opacity: 0;
+
+#overlay.hidden {
+    display: none; 
 }
 
 #overlay {
@@ -81,59 +81,52 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(255, 255, 255, 0.5); /* Halvtransparent bakgrund */
+    background: rgba(255, 255, 255, 0.5);
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1000;  
+    z-index: 1000;
     opacity: 0;
     transition: opacity 0.5s ease, visibility 0s 0.5s;
     visibility: hidden;
 
-
-    .menubutton { 
-        display: none; 
+    .menubutton {
+        display: none;
     }
-    #closeButton {                              // ändra från class till id pga js 
+
+    #closeButton {
         background-color: $primary-color;
         color: $primary-color;
         padding: 0;
         position: absolute;
-        top: 10px; 
+        top: 10px;
         right: 10px;
         border: none;
         opacity: 0;
-        transition: opacity 0.5s ease; 
-       
-
-
+        transition: opacity 0.5s ease;
     }
+
     .modal.show #closebutton {
-        opacity: 1; /*  Gör knappen synlig efter fördröjningen */
+        opacity: 1;
     }
 
-   
-
-
-   p { 
-        color:#FFFFFF; 
+    p {
+        color: #FFFFFF;
         font-size: 36px;
         font-family: $font-family;
         font-weight: $font-weight-bold;
         margin-top: 90px;
         margin-bottom: 10px;
-        
-
     }
- }
+}
 
-.show {            /* När overlayen visas //  #overlay*/
+.show {
     opacity: 1;
     visibility: visible;
     transition: opacity 0.5s ease;
 }
 
- .modal {
+.modal {
     width: 90vw;
     max-width: 410px;
     height: 730px;
@@ -146,12 +139,11 @@ body {
     opacity: 0;
     transition: opacity 0.5s ease;
 
-
 }
-.modal.show { 
+
+.modal.show {
     opacity: 1;
 }
-
 
 // Images
 .image2 {
@@ -216,7 +208,7 @@ body {
     color: $secondary-color;
     border: 2px solid $secondary-color;
     border-radius: 3px;
-    align-items: center; 
+    align-items: center;
     margin-top: 15px;
 }
 
@@ -271,7 +263,7 @@ a:visited {
     line-height: 28.13px;
 
     p {
-        margin-bottom: 5px;                                   
+        margin-bottom: 5px;
 
     }
 
@@ -373,7 +365,7 @@ a:visited {
         color: $white;
         margin-left: 170px;
         border: none;
-    } 
+    }
 }
 
 // Text section
@@ -436,7 +428,7 @@ a:visited {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 566px; 
+    height: 566px;
     background: $primary-color;
     color: $white;
     font-family: $font-family;
@@ -490,12 +482,12 @@ a:visited {
         text-align: left;
     }
 
-    
+
 }
 
 // Desktop    
 @media (min-width: 1280px) {
-  
+
     .h2 {
         display: flex;
         align-items: center;
@@ -503,7 +495,7 @@ a:visited {
     }
 
     .logo img {
-        margin: 40px 0 50px 30px; 
+        margin: 40px 0 50px 30px;
     }
 
     .headermenu {
@@ -515,15 +507,19 @@ a:visited {
         font-weight: $font-weight-bold;
         font-family: $font-family;
         font-size: 24px;
+
         p {
             margin-top: 40px;
             padding: 0 15px;
             display: block;
         }
+
         p:hover {
             color: #8ACFE5;
         }
-        .menubutton {       //To hide Menubutton in desktop
+
+        .menubutton {
+            //To hide Menubutton in desktop
             display: none;
         }
     }
@@ -592,6 +588,7 @@ a:visited {
         left: 51.5%;
         transform: translate(-100%, 0%);
     }
+
     // Second buttons 
     .container3 {
         display: flex;
@@ -631,6 +628,7 @@ a:visited {
         width: 100%;
 
     }
+
     // To only show desktop version
     .image2 {
         display: none;

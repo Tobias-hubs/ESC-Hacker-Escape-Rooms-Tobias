@@ -433,7 +433,7 @@ a:visited {
     padding: 0 15px;
     display: block;
   }
-  .headermenu .blue {
+  .headermenu p:hover {
     color: #8ACFE5;
   }
   .headermenu .menubutton {

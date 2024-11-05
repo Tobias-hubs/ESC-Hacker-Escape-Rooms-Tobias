@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Mobile first 480px */
 body {
   font-family: "Roboto", sans-serif;
@@ -32,6 +33,14 @@ body {
   line-height: 28.13px;
 }
 
+.menubutton {
+  font-size: 24px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 .headermenu .menubutton {
   position: absolute;
   top: 20px;
@@ -55,48 +64,62 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(66, 66, 66, 0.9); /* Halvtransparent bakgrund */
+  background: rgba(255, 255, 255, 0.5); /* Halvtransparent bakgrund */
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.5s ease, visibility 0s 0.5s;
+  visibility: hidden;
 }
 #overlay .menubutton {
   display: none;
 }
-#overlay .closebutton, #overlay #closeButton {
+#overlay #closeButton {
+  background-color: #011827;
+  color: #011827;
   padding: 0;
   position: absolute;
-  top: 20px;
+  top: 10px;
   right: 10px;
+  border: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
-#overlay .closebutton #closeButton, #overlay #closeButton #closeButton {
-  display: none;
+#overlay .modal.show #closebutton {
+  opacity: 1; /*  Gör knappen synlig efter fördröjningen */
 }
 #overlay p {
   color: #FFFFFF;
   font-size: 36px;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
+  margin-top: 90px;
+  margin-bottom: 10px;
+}
+
+.show { /* När overlayen visas //  #overlay*/
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease;
 }
 
 .modal {
   width: 90vw;
   max-width: 410px;
-  height: 550px;
+  height: 730px;
   background: #011827;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   position: relative;
   text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
-.menubutton {
-  font-size: 24px;
-  color: white;
-  background: none;
-  border: none;
-  cursor: pointer;
+.modal.show {
+  opacity: 1;
 }
 
 .image2 {

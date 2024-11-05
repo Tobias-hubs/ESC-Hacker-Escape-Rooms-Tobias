@@ -44,6 +44,16 @@ body {
     }
 }
 
+// Mobile Menu 
+.menubutton {
+    font-size: 24px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    
+}
+
 .headermenu {
     // display: none;
     .menubutton { 
@@ -62,68 +72,86 @@ body {
 }
 #overlay.hidden { 
     display: none;
+    // opacity: 0;
 }
+
 #overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(66, 66, 66, 0.9); /* Halvtransparent bakgrund */
+    background: rgba(255, 255, 255, 0.5); /* Halvtransparent bakgrund */
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1000;
-   
+    z-index: 1000;  
+    opacity: 0;
+    transition: opacity 0.5s ease, visibility 0s 0.5s;
+    visibility: hidden;
+
+
     .menubutton { 
         display: none; 
     }
-    .closebutton, #closeButton { 
-        // background-color: $primary-color;
-        // color: $primary-color;
+    #closeButton {                              // ändra från class till id pga js 
+        background-color: $primary-color;
+        color: $primary-color;
         padding: 0;
         position: absolute;
-        top: 20px; 
+        top: 10px; 
         right: 10px;
-
-        #closeButton {  // Får problem med denna eftersom den syns, och det behövs ju en ID för att js ska fungera? 
-           display: none;
-        }
+        border: none;
+        opacity: 0;
+        transition: opacity 0.5s ease; 
+       
 
 
     }
+    .modal.show #closebutton {
+        opacity: 1; /*  Gör knappen synlig efter fördröjningen */
+    }
+
+   
+
 
    p { 
         color:#FFFFFF; 
         font-size: 36px;
         font-family: $font-family;
         font-weight: $font-weight-bold;
+        margin-top: 90px;
+        margin-bottom: 10px;
         
 
     }
  }
 
+.show {            /* När overlayen visas //  #overlay*/
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease;
+}
+
  .modal {
     width: 90vw;
     max-width: 410px;
-    height: 550px;
+    height: 730px;
     background: $primary-color;
     padding: 20px;
     // border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     position: relative;
     text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+
+
+}
+.modal.show { 
+    opacity: 1;
 }
 
-// Mobile Menu 
-.menubutton {
-    font-size: 24px;
-    color: white;
-    background: none;
-    border: none;
-    cursor: pointer;
-    
-}
 
 // Images
 .image2 {

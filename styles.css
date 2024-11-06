@@ -94,8 +94,9 @@ body {
   font-size: 36px;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
-  margin-top: 90px;
+  margin-top: 100px;
   margin-bottom: 10px;
+  line-height: 42px;
 }
 
 .show {

@@ -55,7 +55,7 @@ body {
 }
 
 .headermenu {
-    
+
     .menubutton {
         position: absolute;
         top: 20px;
@@ -63,7 +63,7 @@ body {
     }
 
     p {
-        display: none; 
+        display: none;
     }
 }
 
@@ -72,7 +72,7 @@ body {
 }
 
 #overlay.hidden {
-    display: none; 
+    display: none;
 }
 
 #overlay {
@@ -115,8 +115,9 @@ body {
         font-size: 36px;
         font-family: $font-family;
         font-weight: $font-weight-bold;
-        margin-top: 90px;
+        margin-top: 100px;
         margin-bottom: 10px;
+        line-height: 42px;
     }
 }
 

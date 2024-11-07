@@ -574,6 +574,9 @@ a:visited {
     display: grid;
     grid-column: 1/2;
     grid-row: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   .nesapic {
     display: none;
@@ -620,6 +623,9 @@ a:visited {
     display: grid;
     grid-column: 2/3;
     grid-row: 2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   .kellypic {
     display: none;

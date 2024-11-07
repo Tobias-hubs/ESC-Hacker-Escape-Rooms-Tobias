@@ -631,6 +631,12 @@ a:visited {
 
     }
 
+    .container2 { 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     // To only show desktop version
     .image2 {
         display: none;

@@ -547,6 +547,11 @@ a:visited {
     height: auto;
     width: 100%;
   }
+  .container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .image2 {
     display: none;
   }
